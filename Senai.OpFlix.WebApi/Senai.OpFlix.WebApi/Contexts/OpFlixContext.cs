@@ -34,15 +34,18 @@ namespace Senai.OpFlix.WebApi.Domains
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Favoritos>(entity =>
-            {
-                entity.HasOne(d => d.Titulo)
-                    .HasForeignKey(d => d.IdTitulo);
 
-                entity.HasOne(d => d.Titulo)
-                    .HasForeignKey(d => d.IdTitulo)
-                    .HasConstraintName("FK__Titulos__IdCateg__5441852A");
-            });
+
+            modelBuilder.Entity<Favoritos>()
+                .HasKey(bc => new { bc.IdUsuario, bc.IdTitulo});
+            modelBuilder.Entity<Favoritos>()
+                .HasOne(bc => bc.Usuario)
+                .WithMany(b => b.Favoritos)
+                .HasForeignKey(bc => bc.IdUsuario);
+            modelBuilder.Entity<Favoritos>()
+                .HasOne(bc => bc.Titulo)
+                .WithMany(c => c.Favoritos)
+                .HasForeignKey(bc => bc.IdTitulo);
 
 
 

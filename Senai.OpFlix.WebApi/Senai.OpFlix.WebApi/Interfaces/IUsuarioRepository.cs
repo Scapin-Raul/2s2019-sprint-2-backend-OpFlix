@@ -21,5 +21,18 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// </summary>
         /// <param name="usuario">Usuario recebido para ser cadastrado</param>
         void Cadastrar(Usuarios usuario);
+
+        /// <summary>
+        /// Busca no BD os registros de favoritos de um usuários
+        /// </summary>
+        /// <returns>Retorna uma lista de titulos, os quais o usuário favoritou</returns>
+        List<Titulos> ListarFavoritos(int id);
+
+        /// <summary>
+        /// Registra no BD um novo Favorito
+        /// </summary>
+        /// <param name="IdTitulo">Id do titulo à ser favoritado</param>
+        /// <param name="IdUsuario">Id do usuário que quer favoritar</param>
+        void AdicionarFavorito(int IdTitulo, int IdUsuario);
     }
 }

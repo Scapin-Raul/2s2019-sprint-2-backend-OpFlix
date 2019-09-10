@@ -74,5 +74,33 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        public List<TituloViewModel> FiltroData(DateTime data)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                var lista = ctx.Titulos.Where(x => x.DataLancamento >= data).ToList();
+
+                List<TituloViewModel> listaTitulosViewModel = new List<TituloViewModel>();
+                foreach (var item in lista)
+                {
+                    TituloViewModel tituloViewModel = new TituloViewModel
+                    {
+                        IdTitulo = item.IdTitulo,
+                        Nome = item.Nome,
+                        Sinopse = item.Sinopse,
+                        Duracao = Convert.ToInt32(item.Duracao),
+                        DataLancamento = Convert.ToDateTime(item.DataLancamento),
+                        Classificacao = item.Classificacao,
+                        Plataforma = ctx.Plataformas.Find(item.IdPlataforma).Nome,
+                        Categoria = ctx.Categorias.Find(item.IdPlataforma).Nome,
+                        TipoTitulo = ctx.TiposTitulos.Find(item.IdTipoTitulo).Tipo
+                    };
+                    listaTitulosViewModel.Add(tituloViewModel);
+                }
+                return listaTitulosViewModel;
+
+            }
+        }
+
     }
 }

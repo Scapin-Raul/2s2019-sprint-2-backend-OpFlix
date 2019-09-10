@@ -26,5 +26,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// </summary>
         /// <param name="plataforma">Recebe a plataforma com as informações à serem atualizadas</param>
         void Atualizar(Plataformas plataforma);
+
+        /// <summary>
+        /// Busca no BD os titulos pertencentes à um plataforma
+        /// </summary>
+        /// <param name="nome">Recebe o nome da plataforma</param>
+        /// <returns>Retorna uma lista de titulos</returns>
+        List<TituloViewModel> TitulosDePlataforma(string nome);
     }
 }

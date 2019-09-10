@@ -32,5 +32,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// </summary>
         /// <param name="id">Recebe o Id do titulo à ser deletado</param>
         void Deletar(int id);
+
+        /// <summary>
+        /// Lista todos os titulos a partir de um data.
+        /// </summary>
+        /// <param name="data">Recebe a da para comparar</param>
+        /// <returns>Retorna uma lista de titulos</returns>
+        List<TituloViewModel> FiltroData(DateTime data);
     }
 }

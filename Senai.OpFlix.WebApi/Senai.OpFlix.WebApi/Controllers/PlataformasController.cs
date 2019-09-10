@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Senai.OpFlix.WebApi.Domains;
 using Senai.OpFlix.WebApi.Interfaces;
 using Senai.OpFlix.WebApi.Repositories;
+using Senai.OpFlix.WebApi.ViewModels;
 
 namespace Senai.OpFlix.WebApi.Controllers
 {
@@ -74,6 +75,21 @@ namespace Senai.OpFlix.WebApi.Controllers
             {
                 return BadRequest(new { mensagem = "Ocorreu um erro " + ex });
             }
+        }
+
+        /// <summary>
+        /// Método que busca titulos pelo nome da Plataforma
+        /// </summary>
+        /// <param name="nome">Recebe o nome da plataforma à ser usada como referencia pela URL</param>
+        /// <returns>Retorna a Lista de Titulos pertencentes aquela plataforma, caso não haja aquela plataforma ou titulos vinculados à ela retorna NotFound</returns>
+        [HttpGet("titulos/{nome}")]
+        public IActionResult TitulosDePlataforma(string nome)
+        {
+            List<TituloViewModel> Lista = PlataformaRepository.TitulosDePlataforma(nome);
+            if (Lista == null) return NotFound(new { mensagem = "Não há plataforma com este nome." });
+            if (Lista.Count() == 0) return NotFound(new { mensagem = "Não há titulos nesta plataforma." });
+
+            return Ok(Lista);
         }
 
     }

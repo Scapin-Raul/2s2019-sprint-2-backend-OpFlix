@@ -97,5 +97,24 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Método que lista todos os titulos a partir de uma data
+        /// </summary>
+        /// <param name="data">Recebe uma data inserida pela URL</param>
+        /// <returns>Retorna a lista de titulos ou BadRequest caso a data esteja mal formatada</returns>
+        [Authorize]
+        [HttpGet("data/{data}")]
+        public IActionResult FiltroData(string data)
+        {
+            DateTime DataD;
+            try
+            {
+                DataD = Convert.ToDateTime(data);
+            }
+            catch (Exception) { return BadRequest(); }
+
+            return Ok(TituloRepository.FiltroData(DataD));
+
+        }
     }
 }

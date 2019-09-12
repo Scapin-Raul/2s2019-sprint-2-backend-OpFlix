@@ -78,20 +78,20 @@ namespace Senai.OpFlix.WebApi.Controllers
         }
 
         /// <summary>
-        /// Metodo que Favorita um titulo para um usuario
+        /// Metodo que Favorita ou Desfavorita um titulo para um usuario
         /// </summary>
         /// <param name="id">Recebe pela url o Id do titulo à ser favoritado</param>
         /// <returns>Retorna Ok caso haja sucesso e BadRequest caso haja algum erro</returns>
         [Authorize]
         [HttpPost("favoritos/{id}")]
-        public IActionResult CadastrarFavorito(int id)
+        public IActionResult FavoritarOuDesfavoritar(int id)
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
             int IdUsuario = Convert.ToInt32(identity.FindFirst(JwtRegisteredClaimNames.Jti).Value);
 
             try
             {
-                UsuarioRepository.AdicionarFavorito(id, IdUsuario);
+                UsuarioRepository.FavoritarOuDesfavoritar(id, IdUsuario);
                 return Ok();
             }
             catch (Exception)

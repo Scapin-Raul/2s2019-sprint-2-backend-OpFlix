@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"ra@gmail.com\",\n\t\"senha\": \"admin123\"\n}"
+							"raw": "{\n\t\"email\": \"ra@gmail.com\",\n\t\"senha\": \"123456\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:5000/api/Login/",
@@ -43,16 +43,6 @@
 				{
 					"name": "Usuarios/Cadastrar",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MDM1NjE4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.pBlKBU_7yz6klhTCZ6eSNNiqDUgeTznzfTQRVm2bw-w",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [
 							{
@@ -64,7 +54,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nome\":\"teste\",\n\t\"email\":\"teste\",\n\t\"senha\":\"123456\",\n\t\"admin\": 1,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"https://s.yimg.com/ny/api/res/1.2/S_.T.QCJ1jjT8geJAvkNFg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/b486faff10c2459650d92f309bad2527\"\n}"
+							"raw": "{\n\t\"nome\":\"testte\",\n\t\"email\":\"testte\",\n\t\"senha\":\"12345678910\",\n\t\"admin\": 0,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"https://s.yimg.com/ny/api/res/1.2/S_.T.QCJ1jjT8geJAvkNFg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/b486faff10c2459650d92f309bad2527\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:5000/api/Usuarios/",
@@ -77,6 +67,69 @@
 								"api",
 								"Usuarios",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/Favoritos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjk2NzI4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Zgn28nmn2gk97vBRq8wRkVSX3JUfusDSCWw_Vha6Sig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/favoritos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"favoritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/Favoritos/{ID} - Cadastrar Favorito",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjk2NzI4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Zgn28nmn2gk97vBRq8wRkVSX3JUfusDSCWw_Vha6Sig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/favoritos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"favoritos",
+								"5"
 							]
 						}
 					},
@@ -95,7 +148,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNAZ21haWwuY29tIiwianRpIjoiNiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkZhbHNlIiwiZXhwIjoxNTY4MDMyNTQzLCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Tv0kHdEZM7SHN-Hr3NrItj6KAnSEH4l-fO4fH2eryfY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MTE1NzE3LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.S7yOSHdBu698uM5DxFPbgq50P_NDtU5VVg0fHt_-G2g",
 									"type": "string"
 								}
 							]
@@ -202,6 +255,38 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Titulos/Data/{DD-mm-YYYY}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Titulos/data/12-09-2019",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Titulos",
+								"data",
+								"12-09-2019"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -258,7 +343,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MDM1NjE4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.pBlKBU_7yz6klhTCZ6eSNNiqDUgeTznzfTQRVm2bw-w",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
 									"type": "string"
 								}
 							]
@@ -322,6 +407,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Categorias/Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Categorias/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Categorias",
+								"13"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -378,7 +494,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MDM1NjE4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.pBlKBU_7yz6klhTCZ6eSNNiqDUgeTznzfTQRVm2bw-w",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
 									"type": "string"
 								}
 							]
@@ -427,6 +543,69 @@
 							"mode": "raw",
 							"raw": "{\n\t\"nome\": \"Amazon Prime\"\n}"
 						},
+						"url": {
+							"raw": "http://localhost:5000/api/Plataformas/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Plataformas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plataformas/Titulos/{NOME}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MTIyMDgyLCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.iaZrZac2uwwonADcN8znHPpDOHVnp9tmVg5vlQhjnRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Plataformas/titulos/a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Plataformas",
+								"titulos",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plataformas/Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
 						"url": {
 							"raw": "http://localhost:5000/api/Plataformas/6",
 							"protocol": "http",

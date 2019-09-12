@@ -78,7 +78,7 @@ namespace Senai.OpFlix.WebApi.Repositories
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                var lista = ctx.Titulos.Where(x => x.DataLancamento >= data).ToList();
+                var lista = ctx.Titulos.Where(x => x.DataLancamento >= data).OrderBy(x=>x.DataLancamento).ToList();
 
                 List<TituloViewModel> listaTitulosViewModel = new List<TituloViewModel>();
                 foreach (var item in lista)
@@ -98,7 +98,6 @@ namespace Senai.OpFlix.WebApi.Repositories
                     listaTitulosViewModel.Add(tituloViewModel);
                 }
                 return listaTitulosViewModel;
-
             }
         }
 

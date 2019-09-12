@@ -58,7 +58,6 @@ namespace Senai.OpFlix.WebApi.Repositories
             using (OpFlixContext ctx = new OpFlixContext())
             {
                 var Plataforma = ctx.Plataformas.FirstOrDefault(x => x.Nome.ToLower() == nome.ToLower());
-
                 List<Titulos> ListaDeTitulos;
 
                 try
@@ -88,10 +87,17 @@ namespace Senai.OpFlix.WebApi.Repositories
                     listaTitulosViewModel.Add(tituloViewModel);
                 }
                 return listaTitulosViewModel;
-
             }
-
         }
-            
+
+        public void Deletar(int id)
+        {
+            using (OpFlixContext ctx = new OpFlixContext())
+            {
+                ctx.Plataformas.Remove(ctx.Plataformas.Find(id));
+                ctx.SaveChanges();
+            }
+        }
+
     }
 }

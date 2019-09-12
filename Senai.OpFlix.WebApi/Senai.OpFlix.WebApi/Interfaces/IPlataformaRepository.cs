@@ -28,6 +28,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         void Atualizar(Plataformas plataforma);
 
         /// <summary>
+        /// Remove uma Plataforma do BD
+        /// </summary>
+        /// <param name="id">Id da plataforma à ser removida</param>
+        void Deletar(int id);
+
+        /// <summary>
         /// Busca no BD os titulos pertencentes à um plataforma
         /// </summary>
         /// <param name="nome">Recebe o nome da plataforma</param>

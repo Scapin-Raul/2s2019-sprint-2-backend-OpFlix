@@ -29,10 +29,10 @@ namespace Senai.OpFlix.WebApi.Interfaces
         List<Titulos> ListarFavoritos(int id);
 
         /// <summary>
-        /// Registra no BD um novo Favorito
+        /// Registra no BD um novo Favorito ou Deleta o Favorito caso já existente
         /// </summary>
         /// <param name="IdTitulo">Id do titulo à ser favoritado</param>
         /// <param name="IdUsuario">Id do usuário que quer favoritar</param>
-        void AdicionarFavorito(int IdTitulo, int IdUsuario);
+        void FavoritarOuDesfavoritar(int IdTitulo, int IdUsuario);
     }
 }

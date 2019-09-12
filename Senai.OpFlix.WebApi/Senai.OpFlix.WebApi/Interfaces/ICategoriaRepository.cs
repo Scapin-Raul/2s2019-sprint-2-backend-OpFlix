@@ -26,5 +26,11 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// </summary>
         /// <param name="categoria">Recebe a categoria com as informações à serem atualizadas</param>
         void Atualizar(Categorias categoria);
+
+        /// <summary>
+        /// Remove uma Plataforma do BD
+        /// </summary>
+        /// <param name="id">Id da plataforma à ser removida</param>
+        void Deletar(int id);
     }
 }

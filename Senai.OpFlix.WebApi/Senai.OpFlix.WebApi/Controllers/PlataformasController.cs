@@ -78,6 +78,25 @@ namespace Senai.OpFlix.WebApi.Controllers
         }
 
         /// <summary>
+        /// Remove uma Plataforma, há de estar logado como admin para realizar tal função
+        /// </summary>
+        /// <param name="id">Recebe o Id da plataforma à ser deletada</param>
+        /// <returns>Caso haja sucesso na remoção retorna Ok, caso não, retorna BadRequest</returns>
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                PlataformaRepository.Deletar(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensagem = "Ocorreu um erro " + ex });
+            }
+        }
+
+        /// <summary>
         /// Método que busca titulos pelo nome da Plataforma
         /// </summary>
         /// <param name="nome">Recebe o nome da plataforma à ser usada como referencia pela URL</param>

@@ -82,9 +82,6 @@ namespace Senai.OpFlix.WebApi.Repositories
                     Favoritar(IdTitulo, IdUsuario);
                 }
         }
-            
-                        
-
 
         private bool VerificarFavorito (int IdTitulo, int IdUsuario)
         {
@@ -136,7 +133,7 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
-        public bool Desfavoritar(int IdTitulo, int IdUsuario)
+        public void Desfavoritar(int IdTitulo, int IdUsuario)
         {
             string query = "DELETE FAVORITOS WHERE IdTitulo = @IdTitulo AND IdUsuario = @IdUsuario";
 
@@ -152,14 +149,6 @@ namespace Senai.OpFlix.WebApi.Repositories
                 }
             }
         }
-
-
-
-
-
-
-
-
         
     }
 }

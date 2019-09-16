@@ -172,7 +172,7 @@
 					"response": []
 				},
 				{
-					"name": "Titulos/Cadastrar",
+					"name": "Titulos/Cadastrar //ADM//",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -204,7 +204,7 @@
 					"response": []
 				},
 				{
-					"name": "Titulos/Alterar",
+					"name": "Titulos/Alterar //ADM//",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -236,7 +236,7 @@
 					"response": []
 				},
 				{
-					"name": "Titulos/Deletar",
+					"name": "Titulos/Deletar //ADM//",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -294,7 +294,7 @@
 			"name": "Categorias",
 			"item": [
 				{
-					"name": "Categorias/Cadastrar",
+					"name": "Categorias/Cadastrar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -336,7 +336,7 @@
 					"response": []
 				},
 				{
-					"name": "Categorias/Listar",
+					"name": "Categorias/Listar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -367,7 +367,7 @@
 					"response": []
 				},
 				{
-					"name": "Categorias/Alterar",
+					"name": "Categorias/Alterar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -409,7 +409,7 @@
 					"response": []
 				},
 				{
-					"name": "Categorias/Deletar",
+					"name": "Categorias/Deletar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -445,7 +445,7 @@
 			"name": "Plataformas",
 			"item": [
 				{
-					"name": "Plataformas/Cadastrar",
+					"name": "Plataformas/Cadastrar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -487,7 +487,7 @@
 					"response": []
 				},
 				{
-					"name": "Plataformas/Listar",
+					"name": "Plataformas/Listar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -518,7 +518,7 @@
 					"response": []
 				},
 				{
-					"name": "Plataformas/Alterar",
+					"name": "Plataformas/Alterar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -592,7 +592,7 @@
 					"response": []
 				},
 				{
-					"name": "Plataformas/Deletar",
+					"name": "Plataformas/Deletar //ADM//",
 					"request": {
 						"auth": {
 							"type": "bearer",

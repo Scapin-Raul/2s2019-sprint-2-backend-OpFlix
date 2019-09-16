@@ -14,7 +14,6 @@ namespace Senai.OpFlix.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [Produces("application/json")]
-    [Authorize(Roles = "True")]
     [ApiController]
     public class PlataformasController : ControllerBase
     {
@@ -31,6 +30,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// </summary>
         /// <param name="plataforma">Recebe uma plataforma para registra-la</param>
         /// <returns>Caso haja sucesso no registro retorna Ok, caso não, retorna BadRequest</returns>
+        [Authorize(Roles = "True")]
         [HttpPost]
         public IActionResult Cadastrar(Plataformas plataforma)
         {
@@ -50,6 +50,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// Lista as Plataformas registradas no BD, há de estar logado como admin para realizar tal função
         /// </summary>
         /// <returns>Retorna um lista com todas as Plataformas</returns>
+        [Authorize(Roles = "True")]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -62,6 +63,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// <param name="plataforma">Recebe a plataforma com os dados à serem atualizadas</param>
         /// <param name="id">Recebe o Id da plataforma à ser alterada</param>
         /// <returns>Caso haja sucesso no registro retorna Ok, caso não, retorna BadRequest</returns>
+        [Authorize(Roles = "True")]
         [HttpPut("{id}")]
         public IActionResult Alterar(Plataformas plataforma, int id)
         {
@@ -82,6 +84,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// </summary>
         /// <param name="id">Recebe o Id da plataforma à ser deletada</param>
         /// <returns>Caso haja sucesso na remoção retorna Ok, caso não, retorna BadRequest</returns>
+        [Authorize(Roles = "True")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
@@ -101,6 +104,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// </summary>
         /// <param name="nome">Recebe o nome da plataforma à ser usada como referencia pela URL</param>
         /// <returns>Retorna a Lista de Titulos pertencentes aquela plataforma, caso não haja aquela plataforma ou titulos vinculados à ela retorna NotFound</returns>
+        [Authorize]
         [HttpGet("titulos/{nome}")]
         public IActionResult TitulosDePlataforma(string nome)
         {

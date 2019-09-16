@@ -57,8 +57,9 @@ namespace Senai.OpFlix.WebApi.Repositories
         {
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                var Plataforma = ctx.Plataformas.FirstOrDefault(x => x.Nome.ToLower() == nome.ToLower());
+                var Plataforma = ctx.Plataformas.FirstOrDefault(x => x.Nome.ToLower().Contains(nome.ToLower()));
                 List<Titulos> ListaDeTitulos;
+
 
                 try
                 {

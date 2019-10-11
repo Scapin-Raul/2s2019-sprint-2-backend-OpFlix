@@ -50,7 +50,8 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// Lista as Plataformas registradas no BD, há de estar logado como admin para realizar tal função
         /// </summary>
         /// <returns>Retorna um lista com todas as Plataformas</returns>
-        [Authorize(Roles = "True")]
+
+        /*[Authorize(Roles = "True")]*/
         [HttpGet]
         public IActionResult Listar()
         {
@@ -104,7 +105,6 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// </summary>
         /// <param name="nome">Recebe o nome da plataforma à ser usada como referencia pela URL</param>
         /// <returns>Retorna a Lista de Titulos pertencentes aquela plataforma, caso não haja aquela plataforma ou titulos vinculados à ela retorna NotFound</returns>
-        [Authorize]
         [HttpGet("titulos/{nome}")]
         public IActionResult TitulosDePlataforma(string nome)
         {

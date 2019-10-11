@@ -27,7 +27,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// Lista os Titulos registrados no BD, há de estar logado para realizar tal função
         /// </summary>
         /// <returns>Retorna um lista com todos os Titulos</returns>
-        [Authorize]
+        /*[Authorize]*/
         [HttpGet]
         public IActionResult Listar()
         {
@@ -102,7 +102,7 @@ namespace Senai.OpFlix.WebApi.Controllers
         /// </summary>
         /// <param name="data">Recebe uma data inserida pela URL</param>
         /// <returns>Retorna a lista de titulos ou BadRequest caso a data esteja mal formatada</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet("data/{data}")]
         public IActionResult FiltroData(string data)
         {

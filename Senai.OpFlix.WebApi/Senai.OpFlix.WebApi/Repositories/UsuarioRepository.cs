@@ -38,7 +38,7 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
-        public List<Titulos> ListarFavoritos(int id)
+        public List<TituloViewModel> ListarFavoritos(int id)
         {
             string query = "SELECT * FROM Favoritos WHERE IdUsuario = @Id";
             List<int> ListaIdTitulos = new List<int>();
@@ -60,14 +60,32 @@ namespace Senai.OpFlix.WebApi.Repositories
                 }
             }
 
+            List<Titulos> ListaTitulos = new List<Titulos>();
+
             using (OpFlixContext ctx = new OpFlixContext())
             {
-                List<Titulos> ListaTitulos = new List<Titulos>();
                 foreach (int item in ListaIdTitulos)
                 {
                     ListaTitulos.Add(ctx.Titulos.Find(item));
                 }
-                return ListaTitulos;
+                List<TituloViewModel> listaTitulosViewModel = new List<TituloViewModel>();
+                foreach (var item in ListaTitulos)
+                {
+                    TituloViewModel tituloViewModel = new TituloViewModel
+                    {
+                        IdTitulo = item.IdTitulo,
+                        Nome = item.Nome,
+                        Sinopse = item.Sinopse,
+                        Duracao = Convert.ToInt32(item.Duracao),
+                        DataLancamento = Convert.ToDateTime(item.DataLancamento),
+                        Classificacao = item.Classificacao,
+                        Plataforma = ctx.Plataformas.Find(item.IdPlataforma).Nome,
+                        Categoria = ctx.Categorias.Find(item.IdPlataforma).Nome,
+                        TipoTitulo = ctx.TiposTitulos.Find(item.IdTipoTitulo).Tipo
+                    };
+                    listaTitulosViewModel.Add(tituloViewModel);
+                }
+                return listaTitulosViewModel;
             }
         }
             

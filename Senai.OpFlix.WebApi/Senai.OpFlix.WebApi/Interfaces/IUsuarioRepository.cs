@@ -26,7 +26,7 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// Busca no BD os registros de favoritos de um usuários
         /// </summary>
         /// <returns>Retorna uma lista de titulos, os quais o usuário favoritou</returns>
-        List<Titulos> ListarFavoritos(int id);
+        List<TituloViewModel> ListarFavoritos(int id);
 
         /// <summary>
         /// Registra no BD um novo Favorito ou Deleta o Favorito caso já existente

@@ -22,19 +22,21 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"ra@gmail.com\",\n\t\"senha\": \"123456\"\n}"
+							"raw": "{\n\t\"email\": \"erik@email.com\",\n\t\"senha\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Login/",
+							"raw": "http://192.168.4.203:5000/api/login",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
 								"api",
-								"Login",
-								""
+								"login"
 							]
 						}
 					},
@@ -54,13 +56,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nome\":\"testte\",\n\t\"email\":\"testte\",\n\t\"senha\":\"12345678910\",\n\t\"admin\": 0,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"https://s.yimg.com/ny/api/res/1.2/S_.T.QCJ1jjT8geJAvkNFg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/b486faff10c2459650d92f309bad2527\"\n}"
+							"raw": "{\n\t\"nome\":\"teste\",\n\t\"email\":\"teste\",\n\t\"senha\":\"123456\",\n\t\"admin\": 0,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"TESTE\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Usuarios/",
+							"raw": "http://192.168.4.203:5000/api/Usuarios/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -88,10 +93,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Usuarios/favoritos",
+							"raw": "http://192.168.4.203:5000/api/Usuarios/favoritos",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -119,10 +127,13 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Usuarios/favoritos/5",
+							"raw": "http://192.168.4.203:5000/api/Usuarios/favoritos/5",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -130,6 +141,40 @@
 								"Usuarios",
 								"favoritos",
 								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios/Buscar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyaWtAZW1haWwuY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlRydWUiLCJzdWIiOiJUcnVlIiwiZXhwIjoxNTc0MDc2ODQ4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Gei4YinB361ppCP1v29QjtcqRj63qJn8OImlF41Urds",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.203:5000/api/Usuarios/buscar",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"203"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"buscar"
 							]
 						}
 					},
@@ -156,10 +201,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Titulos/",
+							"raw": "http://192.168.4.203:5000/api/Titulos/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -174,6 +222,16 @@
 				{
 					"name": "Titulos/Cadastrar //ADM//",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MTc0MjAzNSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.jPf-7BYExx1DNexYLiUp8jxa6IeaVIzgJDI9enUPISA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -185,13 +243,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Teste\",\n    \"sinopse\": \"teste\",\n    \"duracao\": 111,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 1,\n    \"idcategoria\": 1,\n    \"idtipoTitulo\": 1,\n    \"idclassificacao\": \"12\"\n}"
+							"raw": "{\n    \"nome\": \"Teste\",\n    \"sinopse\": \"teste\",\n    \"duracao\": 111,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 1,\n    \"idcategoria\": 1,\n    \"idtipoTitulo\": 1\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Titulos/",
+							"raw": "http://192.168.4.203:5000/api/Titulos/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -206,6 +267,16 @@
 				{
 					"name": "Titulos/Alterar //ADM//",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MTc0MjM0MiwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.pr6Ttr_s66nwIGv_x95qp9N97369OUTzpL65oCPh5bc",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -217,19 +288,22 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Teste\",\n    \"sinopse\": \"teste\",\n    \"duracao\": 231231,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 1,\n    \"idcategoria\": 1,\n    \"idtipoTitulo\": 1,\n    \"idclassificacao\": \"12\"\n}"
+							"raw": "{\n    \"nome\": \"Viuva Negra\",\n    \"sinopse\": \"Uma agente inflitrada bate em macho.\",\n    \"duracao\": 166,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 2,\n    \"idcategoria\": 2,\n    \"idtipoTitulo\": 1,\n    \"classificacao\": \"12\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Titulos/24",
+							"raw": "http://192.168.4.203:5000/api/Titulos/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
-								"24"
+								"1"
 							]
 						}
 					},
@@ -238,19 +312,32 @@
 				{
 					"name": "Titulos/Deletar //ADM//",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MzY1MzQxMSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.a6Tw6xTsv4JQTdBQGUYn_l1rgq2vWDnFI4XkbMaLSSI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Titulos/24",
+							"raw": "http://192.168.4.203:5000/api/Titulos/21",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
-								"24"
+								"21"
 							]
 						}
 					},
@@ -264,7 +351,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MzY0NDY1MSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.1OoiNORXkZWOSaXX4t54FOjRgF7WEfXnHdojWuXqV0U",
 									"type": "string"
 								}
 							]
@@ -272,17 +359,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Titulos/data/12-09-2019",
+							"raw": "http://192.168.4.203:5000/api/Titulos/data/01-01-1990",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
 								"data",
-								"12-09-2019"
+								"01-01-1990"
 							]
 						}
 					},
@@ -320,10 +410,13 @@
 							"raw": "{\n\t\"nome\": \"Sei la\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Categorias/",
+							"raw": "http://192.168.4.203:5000/api/Categorias/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -343,7 +436,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MTc1NTE1NSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.P-SOrcTPEyosd11Znqb-jyPNZ2sGbNFXJTcryqLX9pE",
 									"type": "string"
 								}
 							]
@@ -351,10 +444,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Categorias/",
+							"raw": "http://192.168.4.203:5000/api/Categorias/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -393,10 +489,13 @@
 							"raw": "{\n\t\"nome\": \"Investigação\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Categorias/12",
+							"raw": "http://192.168.4.203:5000/api/Categorias/12",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -424,10 +523,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Categorias/13",
+							"raw": "http://192.168.4.203:5000/api/Categorias/13",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -471,10 +573,13 @@
 							"raw": "{\n\t\"nome\": \"Sei la\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Plataformas/",
+							"raw": "http://192.168.4.203:5000/api/Plataformas/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -494,7 +599,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4Mjg4MTA0LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.SnVdh0SD3frTa3egxBcsYuy9tqoQt0doalodxOglmSI",
+									"value": "",
 									"type": "string"
 								}
 							]
@@ -502,10 +607,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Plataformas/",
+							"raw": "http://192.168.4.203:5000/api/Plataformas/",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -544,10 +652,13 @@
 							"raw": "{\n\t\"nome\": \"Amazon Prime\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Plataformas/6",
+							"raw": "http://192.168.4.203:5000/api/Plataformas/6",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -567,7 +678,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwiZXhwIjoxNTY4MTIyMDgyLCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.iaZrZac2uwwonADcN8znHPpDOHVnp9tmVg5vlQhjnRU",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhQGdtYWlsLmNvbSIsImp0aSI6IjUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJUcnVlIiwic3ViIjoiVHJ1ZSIsImV4cCI6MTU3MzU2NDI3OSwiaXNzIjoiT3BGbGl4LldlYkFwaSIsImF1ZCI6Ik9wRmxpeC5XZWJBcGkifQ.MkmAbrlLyUoIb_OopUnNXlusxmmi0hWvr8OWR1wZDg0",
 									"type": "string"
 								}
 							]
@@ -575,10 +686,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Plataformas/titulos/a",
+							"raw": "http://192.168.4.203:5000/api/Plataformas/titulos/a",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [
@@ -607,10 +721,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Plataformas/6",
+							"raw": "http://192.168.4.203:5000/api/Plataformas/6",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"4",
+								"203"
 							],
 							"port": "5000",
 							"path": [

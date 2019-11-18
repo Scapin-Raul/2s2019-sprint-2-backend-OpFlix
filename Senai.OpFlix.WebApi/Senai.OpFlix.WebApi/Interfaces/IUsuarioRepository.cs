@@ -34,5 +34,12 @@ namespace Senai.OpFlix.WebApi.Interfaces
         /// <param name="IdTitulo">Id do titulo à ser favoritado</param>
         /// <param name="IdUsuario">Id do usuário que quer favoritar</param>
         void FavoritarOuDesfavoritar(int IdTitulo, int IdUsuario);
+
+        /// <summary>
+        /// Busca um usuario no BD pelo Id e retorna suas informações
+        /// </summary>
+        /// <param name="IdUsuario">Id do Usuario à ser buscado</param>
+        /// <returns>Usuario View Model de Usuario</returns>
+        UsuarioViewModel BuscarUsuarioPorId(int IdUsuario);
     }
 }

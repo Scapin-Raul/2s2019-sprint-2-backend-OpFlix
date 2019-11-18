@@ -100,7 +100,24 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
         }
 
+        [Authorize]
+        [HttpGet("buscar/")]
+        public IActionResult BuscarUsuarioPorId()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            int IdUsuario = Convert.ToInt32(identity.FindFirst(JwtRegisteredClaimNames.Jti).Value);
 
+            try
+            {
+                
+                return Ok(UsuarioRepository.BuscarUsuarioPorId(IdUsuario));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensagem = "Ocorreu um erro " + ex });
+            }
+
+        }
 
 
     }

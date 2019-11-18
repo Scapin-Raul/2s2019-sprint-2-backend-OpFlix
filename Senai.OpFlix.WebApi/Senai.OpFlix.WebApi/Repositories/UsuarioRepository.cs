@@ -167,6 +167,31 @@ namespace Senai.OpFlix.WebApi.Repositories
                 }
             }
         }
-        
+
+        public UsuarioViewModel BuscarUsuarioPorId(int IdUsuario)
+        {
+            try
+            {
+                using (OpFlixContext ctx = new OpFlixContext())
+                {
+                    var UsuarioBuscado = ctx.Usuarios.Find(IdUsuario);
+
+                    UsuarioViewModel UsuarioRetornar = new UsuarioViewModel {
+                        IdUsuario = UsuarioBuscado.IdUsuario,
+                        Nome = UsuarioBuscado.Nome,
+                        Email = UsuarioBuscado.Email,
+                        DataNascimento = Convert.ToDateTime(UsuarioBuscado.DataNascimento),
+                        Imagem = UsuarioBuscado.Imagem
+                    };
+
+                    return UsuarioRetornar;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
     }
 }

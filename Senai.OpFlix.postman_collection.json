@@ -25,15 +25,10 @@
 							"raw": "{\n\t\"email\": \"erik@email.com\",\n\t\"senha\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/login",
-							"protocol": "http",
+							"raw": "{{ip}}/api/login",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"login"
@@ -56,18 +51,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"nome\":\"teste\",\n\t\"email\":\"teste\",\n\t\"senha\":\"123456\",\n\t\"admin\": 0,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"TESTE\"\n}"
+							"raw": "{\n\t\"nome\":\"test\",\n\t\"email\":\"tet\",\n\t\"senha\":\"156\",\n\t\"admin\": 0,\n\t\"datanascimento\":\"1993-07-01\",\n\t\"imagem\":\"TESTE\"\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Usuarios/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Usuarios/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios",
@@ -93,15 +83,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Usuarios/favoritos",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Usuarios/favoritos",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios",
@@ -127,15 +112,10 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Usuarios/favoritos/5",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Usuarios/favoritos/5",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios",
@@ -154,7 +134,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyaWtAZW1haWwuY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlRydWUiLCJzdWIiOiJUcnVlIiwiZXhwIjoxNTc0MDc2ODQ4LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Gei4YinB361ppCP1v29QjtcqRj63qJn8OImlF41Urds",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyaWtAZW1haWwuY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlRydWUiLCJzdWIiOiJUcnVlIiwiZXhwIjoxNTc0NDI2NDc2LCJpc3MiOiJPcEZsaXguV2ViQXBpIiwiYXVkIjoiT3BGbGl4LldlYkFwaSJ9.Ny8Hvc8F_5gWyQwEiypuoz-mVx_33s3Xa9fkzbC2c8k",
 									"type": "string"
 								}
 							]
@@ -162,15 +142,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Usuarios/buscar",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Usuarios/buscar",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios",
@@ -201,15 +176,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Titulos/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Titulos/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
@@ -246,15 +216,10 @@
 							"raw": "{\n    \"nome\": \"Teste\",\n    \"sinopse\": \"teste\",\n    \"duracao\": 111,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 1,\n    \"idcategoria\": 1,\n    \"idtipoTitulo\": 1\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Titulos/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Titulos/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
@@ -291,15 +256,10 @@
 							"raw": "{\n    \"nome\": \"Viuva Negra\",\n    \"sinopse\": \"Uma agente inflitrada bate em macho.\",\n    \"duracao\": 166,\n    \"dataLancamento\": \"2020-05-01T00:00:00\",\n    \"idplataforma\": 2,\n    \"idcategoria\": 2,\n    \"idtipoTitulo\": 1,\n    \"classificacao\": \"12\"\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Titulos/1",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Titulos/1",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
@@ -325,15 +285,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Titulos/21",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Titulos/21",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
@@ -359,15 +314,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Titulos/data/01-01-1990",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Titulos/data/01-01-1990",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Titulos",
@@ -410,15 +360,10 @@
 							"raw": "{\n\t\"nome\": \"Sei la\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Categorias/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Categorias/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Categorias",
@@ -444,15 +389,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Categorias/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Categorias/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Categorias",
@@ -489,15 +429,10 @@
 							"raw": "{\n\t\"nome\": \"Investigação\"\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Categorias/12",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Categorias/12",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Categorias",
@@ -523,15 +458,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Categorias/13",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Categorias/13",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Categorias",
@@ -573,15 +503,10 @@
 							"raw": "{\n\t\"nome\": \"Sei la\"\n\t\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Plataformas/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Plataformas/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Plataformas",
@@ -607,15 +532,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Plataformas/",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Plataformas/",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Plataformas",
@@ -652,15 +572,10 @@
 							"raw": "{\n\t\"nome\": \"Amazon Prime\"\n}"
 						},
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Plataformas/6",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Plataformas/6",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Plataformas",
@@ -686,15 +601,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Plataformas/titulos/a",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Plataformas/titulos/a",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Plataformas",
@@ -721,15 +631,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://192.168.4.203:5000/api/Plataformas/6",
-							"protocol": "http",
+							"raw": "{{ip}}/api/Plataformas/6",
 							"host": [
-								"192",
-								"168",
-								"4",
-								"203"
+								"{{ip}}"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"Plataformas",

@@ -3,7 +3,6 @@ C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.runtimeconfig.dev.json
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.dll
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.csprojAssemblyReference.cache
-C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.csproj.CoreCompileInputs.cache
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.RazorAssemblyInfo.cache
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.RazorAssemblyInfo.cs
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.AssemblyInfoInputs.cache
@@ -12,3 +11,4 @@ C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\bin\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.pdb
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.dll
 C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\obj\Debug\netcoreapp2.1\Senai.OpFlix.WebApi.pdb
+C:\Users\46791749865\Desktop\2s2019\2s2019-sprint-2-backend-OpFlix\Senai.OpFlix.WebApi\Senai.OpFlix.WebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json

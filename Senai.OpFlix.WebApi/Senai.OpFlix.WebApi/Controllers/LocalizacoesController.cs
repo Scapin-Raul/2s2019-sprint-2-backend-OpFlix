@@ -36,6 +36,7 @@ namespace Senai.OpFlix.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles ="True")]
         [HttpPost]
         public IActionResult Cadastrar(Localizacoes localizacoes)
         {
